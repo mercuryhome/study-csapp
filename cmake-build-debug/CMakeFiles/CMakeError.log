@@ -1,0 +1,17 @@
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /Users/chimmyhuang/workspace/study-csapp/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gcc -f Makefile cmTC_acf9c/fast && clang: error: unknown argument: '-f'
+clang: error: no such file or directory: 'cmTC_acf9c/fast'
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/chimmyhuang/workspace/study-csapp/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gcc -f Makefile cmTC_2ea5a/fast && clang: error: unknown argument: '-f'
+clang: error: no such file or directory: 'cmTC_2ea5a/fast'
+
+
+

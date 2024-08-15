@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.24)
+project(study_csapp C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(study_csapp main.c)
+
+add_executable(study-csapp )
+add_executable(study-csapp )
+add_executable(study-csapp )
