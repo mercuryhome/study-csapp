@@ -1,3 +1,7 @@
+/*
+ * Linux进程地址空间与进程内存布局详解
+ * https://zhuanlan.zhihu.com/p/348171413
+ */
 #include<stdio.h>
 #include <stdlib.h>
 
