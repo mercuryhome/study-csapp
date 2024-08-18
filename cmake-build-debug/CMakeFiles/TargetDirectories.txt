@@ -1,4 +1,0 @@
-/Users/huangzhiming/workspace/study-csapp/cmake-build-debug/CMakeFiles/csapp.dir
-/Users/huangzhiming/workspace/study-csapp/cmake-build-debug/CMakeFiles/show_byte.dir
-/Users/huangzhiming/workspace/study-csapp/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/huangzhiming/workspace/study-csapp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
