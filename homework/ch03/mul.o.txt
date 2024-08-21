@@ -1,0 +1,72 @@
+
+mul:	file format mach-o 64-bit x86-64
+
+Disassembly of section __TEXT,__text:
+
+0000000100003ef0 <_mulstore>:
+100003ef0: 55                          	pushq	%rbp
+100003ef1: 48 89 e5                    	movq	%rsp, %rbp
+100003ef4: 48 0f af fe                 	imulq	%rsi, %rdi
+100003ef8: 48 89 3a                    	movq	%rdi, (%rdx)
+100003efb: 5d                          	popq	%rbp
+100003efc: c3                          	retq
+100003efd: 0f 1f 00                    	nopl	(%rax)
+
+0000000100003f00 <_mult2>:
+100003f00: 55                          	pushq	%rbp
+100003f01: 48 89 e5                    	movq	%rsp, %rbp
+100003f04: 48 89 f8                    	movq	%rdi, %rax
+100003f07: 48 0f af c6                 	imulq	%rsi, %rax
+100003f0b: 5d                          	popq	%rbp
+100003f0c: c3                          	retq
+100003f0d: 0f 1f 00                    	nopl	(%rax)
+
+0000000100003f10 <_mulstore1>:
+100003f10: 55                          	pushq	%rbp
+100003f11: 48 89 e5                    	movq	%rsp, %rbp
+100003f14: 48 89 f8                    	movq	%rdi, %rax
+100003f17: 48 0f af c6                 	imulq	%rsi, %rax
+100003f1b: 5d                          	popq	%rbp
+100003f1c: c3                          	retq
+100003f1d: 0f 1f 00                    	nopl	(%rax)
+
+0000000100003f20 <_mulstore2>:
+100003f20: 55                          	pushq	%rbp
+100003f21: 48 89 e5                    	movq	%rsp, %rbp
+100003f24: 5d                          	popq	%rbp
+100003f25: c3                          	retq
+		...
+100003f2e: 00 00                       	addb	%al, (%rax)
+
+0000000100003f30 <_main>:
+100003f30: 55                          	pushq	%rbp
+100003f31: 48 89 e5                    	movq	%rsp, %rbp
+100003f34: 53                          	pushq	%rbx
+100003f35: 50                          	pushq	%rax
+100003f36: 48 8d 55 f0                 	leaq	-16(%rbp), %rdx
+100003f3a: bf 02 00 00 00              	movl	$2, %edi
+100003f3f: be 03 00 00 00              	movl	$3, %esi
+100003f44: e8 a7 ff ff ff              	callq	0x100003ef0 <_mulstore>
+100003f49: 48 8b 75 f0                 	movq	-16(%rbp), %rsi
+100003f4d: 48 8d 1d 36 00 00 00        	leaq	54(%rip), %rbx          ## 0x100003f8a <_printf+0x100003f8a>
+100003f54: 48 89 df                    	movq	%rbx, %rdi
+100003f57: 31 c0                       	xorl	%eax, %eax
+100003f59: e8 26 00 00 00              	callq	0x100003f84 <_printf+0x100003f84>
+100003f5e: bf 02 00 00 00              	movl	$2, %edi
+100003f63: be 03 00 00 00              	movl	$3, %esi
+100003f68: 31 d2                       	xorl	%edx, %edx
+100003f6a: e8 b1 ff ff ff              	callq	0x100003f20 <_mulstore2>
+100003f6f: 48 89 df                    	movq	%rbx, %rdi
+100003f72: 31 f6                       	xorl	%esi, %esi
+100003f74: 31 c0                       	xorl	%eax, %eax
+100003f76: e8 09 00 00 00              	callq	0x100003f84 <_printf+0x100003f84>
+100003f7b: 31 c0                       	xorl	%eax, %eax
+100003f7d: 48 83 c4 08                 	addq	$8, %rsp
+100003f81: 5b                          	popq	%rbx
+100003f82: 5d                          	popq	%rbp
+100003f83: c3                          	retq
+
+Disassembly of section __TEXT,__stubs:
+
+0000000100003f84 <__stubs>:
+100003f84: ff 25 76 00 00 00           	jmpq	*118(%rip)              ## 0x100004000 <_printf+0x100004000>

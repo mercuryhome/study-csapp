@@ -1,0 +1,37 @@
+
+mulstore.o:	file format mach-o 64-bit x86-64
+
+Disassembly of section __TEXT,__text:
+
+0000000000000000 <_mulstore>:
+       0: 55                           	pushq	%rbp
+       1: 48 89 e5                     	movq	%rsp, %rbp
+       4: 48 0f af fe                  	imulq	%rsi, %rdi
+       8: 48 89 3a                     	movq	%rdi, (%rdx)
+       b: 5d                           	popq	%rbp
+       c: c3                           	retq
+       d: 0f 1f 00                     	nopl	(%rax)
+
+0000000000000010 <_mult2>:
+      10: 55                           	pushq	%rbp
+      11: 48 89 e5                     	movq	%rsp, %rbp
+      14: 48 89 f8                     	movq	%rdi, %rax
+      17: 48 0f af c6                  	imulq	%rsi, %rax
+      1b: 5d                           	popq	%rbp
+      1c: c3                           	retq
+      1d: 0f 1f 00                     	nopl	(%rax)
+
+0000000000000020 <_mulstore2>:
+      20: 55                           	pushq	%rbp
+      21: 48 89 e5                     	movq	%rsp, %rbp
+      24: 5d                           	popq	%rbp
+      25: c3                           	retq
+      26: 66 2e 0f 1f 84 00 00 00 00 00	nopw	%cs:(%rax,%rax)
+
+0000000000000030 <_mulstore1>:
+      30: 55                           	pushq	%rbp
+      31: 48 89 e5                     	movq	%rsp, %rbp
+      34: 48 89 f8                     	movq	%rdi, %rax
+      37: 48 0f af c6                  	imulq	%rsi, %rax
+      3b: 5d                           	popq	%rbp
+      3c: c3                           	retq
