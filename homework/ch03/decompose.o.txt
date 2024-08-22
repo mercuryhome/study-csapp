@@ -1,0 +1,29 @@
+
+decompose.o:	file format mach-o 64-bit x86-64
+
+Disassembly of section __TEXT,__text:
+
+0000000000000000 <_decompose>:
+       0: 55                           	pushq	%rbp
+       1: 48 89 e5                     	movq	%rsp, %rbp
+       4: f2 48 0f 2c c0               	cvttsd2si	%xmm0, %rax
+       9: 48 89 07                     	movq	%rax, (%rdi)
+       c: f2 48 0f 2a c8               	cvtsi2sd	%rax, %xmm1
+      11: f2 0f 5c c1                  	subsd	%xmm1, %xmm0
+      15: f2 0f 11 06                  	movsd	%xmm0, (%rsi)
+      19: 5d                           	popq	%rbp
+      1a: c3                           	retq
+      1b: 0f 1f 44 00 00               	nopl	(%rax,%rax)
+
+0000000000000020 <_main>:
+      20: 55                           	pushq	%rbp
+      21: 48 89 e5                     	movq	%rsp, %rbp
+      24: 48 8d 3d 25 00 00 00         	leaq	37(%rip), %rdi          ## 0x50 <_main+0x30>
+      2b: f2 0f 10 05 15 00 00 00      	movsd	21(%rip), %xmm0         ## xmm0 = mem[0],zero
+                                                                        ## 0x48 <_main+0x28>
+      33: be 03 00 00 00               	movl	$3, %esi
+      38: b0 01                        	movb	$1, %al
+      3a: e8 00 00 00 00               	callq	0x3f <_main+0x1f>
+      3f: 31 c0                        	xorl	%eax, %eax
+      41: 5d                           	popq	%rbp
+      42: c3                           	retq
