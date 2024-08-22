@@ -8,3 +8,13 @@ add_executable(hello main.c)
 add_executable(virtual-mem1 homework/ch02/virtual-mem1.c)
 add_executable(virtual-mem homework/ch02/virtual-mem.c)
 add_executable(show_bytes homework/ch02/show-bytes.c)
+add_executable(exchange homework/ch03/exchange.c)
+#add_executable(mul homework/ch03/mul.c mulstore.c)
+add_executable(decompose homework/ch03/decompose.c)
+
+
+
+
+
+
+
