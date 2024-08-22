@@ -1,0 +1,19 @@
+Mac OS X
+If you are using Mac OS X, a preferences file will be created for you on the first time you run DOSBox (as of version 0.73). This file contains the same system settings and initialization values as the dosbox.conf file on other systems.
+
+It can be found (and modified) at ~/Library/Preferences/DOSBox 0.73 Preferences, where ~/ is your user profile folder (usually /Macintosh HD/Users/username/). The exact folder name in the Finder may vary, depending on the language you use for OS X.
+
+--------------------------
+[sdl]
+windowresolution=1280x1080
+
+[autoexec]
+# Lines in this section will be run at startup.
+# You can put your MOUNT lines here.
+@ECHO OFF
+MOUNT C ~/workspace/study-csapp/dosbox/dos
+MOUNT D ~/workspace/study-csapp/dosbox/code
+SET PATH=Z:\;C:\;D:\
+C:
+CLS
+ECHO Study csapp ...
