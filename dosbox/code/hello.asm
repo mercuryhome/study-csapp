@@ -1,21 +1,21 @@
-.model small
-.stack 100h
+DATAS  SEGMENT
+     MSG DB  'Hello World!',13,10,'$'
 
-.data
-    hello_msg db 'Hello, world!$'  ; 定义字符串，$ 是字符串的结束符
+DATAS  ENDS
 
-.code
-main proc
-    mov ax, @data        ; 初始化数据段
-    mov ds, ax
+CODES  SEGMENT
+     ASSUME  CS:CODES,DS:DATAS
 
-    ; 显示字符串
-    lea dx, hello_msg    ; 加载字符串地址到DX
-    mov ah, 09h          ; DOS 功能号 09h (显示字符串)
-    int 21h              ; 调用DOS中断
+START:
+     MOV  AX,DATAS
+     MOV  DS,AX
 
-    ; 结束程序
-    mov ax, 4C00h        ; 退出代码
-    int 21h              ; 调用DOS中断
-main endp
-end main
+     LEA  DX,MSG
+
+     MOV  AH,9
+     INT  21H
+
+     MOV  AX,4C00H
+     INT  21H
+CODES  ENDS
+    END   START

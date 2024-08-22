@@ -26,7 +26,7 @@
 fullscreen=false
 fulldouble=false
 fullresolution=original
-windowresolution=1280x1080
+windowresolution=1680x1050
 output=opengl
 autolock=true
 sensitivity=100
@@ -247,10 +247,10 @@ ipx=false
 # Lines in this section will be run at startup.
 # You can put your MOUNT lines here.
 @ECHO OFF
-MOUNT C ~/workspace/study-csapp/dosbox/dos
+MOUNT C ~/workspace/study-csapp/dosbox/masm
 MOUNT D ~/workspace/study-csapp/dosbox/code
 SET PATH=Z:\;C:\;D:\
-C:
+D:
 CLS
-ECHO Study csapp ...
-
+type hello.txt
+hello.exe
