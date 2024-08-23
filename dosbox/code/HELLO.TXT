@@ -1,0 +1,9 @@
+A simple exercise for hello world!
+
+1. masm hello.asm
+
+2. link hello.obj
+
+3. hello.exe
+
+4. debug hello.exe
