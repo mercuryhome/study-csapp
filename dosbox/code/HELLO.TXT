@@ -1,9 +1,8 @@
 A simple exercise for hello world!
-
-1. masm hello.asm
-
-2. link hello.obj
-
-3. hello.exe
-
-4. debug hello.exe
+1. d:
+2. cd \
+3. dir /w
+4. masm hello.asm
+5. link hello.obj
+6. hello.exe
+7. debug hello.exe
